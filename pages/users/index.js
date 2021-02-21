@@ -1,9 +1,16 @@
 import Title from "../../components/title";
+import Head from 'next/head';
 import Layout from "../../components/layout";
 import Link from "next/link";
 export default function Users({ users }) {
   return (
     <Layout>
+                  <Head>
+                <title>
+Landing page de usuários
+                </title>
+                <meta name="description" content="Nesse curso de webtutoriais aprendemos sobre NextJS"></meta>
+            </Head>
       <Title>User Page</Title>
       <div className="grid">
         {users.map(user => {
@@ -67,3 +74,4 @@ export async function getStaticProps() {
     },
   };
 }
+

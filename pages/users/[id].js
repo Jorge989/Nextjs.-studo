@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router';
-
+import Head from 'next/head'
 import Title from '../../components/title';
 import Layout from '../../components/layout';
 export default function User({user}){
@@ -10,7 +10,12 @@ export default function User({user}){
     console.log(router);
     return(
         <Layout>
- 
+              <Head>
+                <title>
+User #{user.id}
+                </title>
+                <meta name="description" content="Nesse curso de webtutoriais aprendemos sobre NextJS"></meta>
+            </Head>
             <Title>User ID {user.id}</Title>
             <div className="card">
             <h3>User</h3>

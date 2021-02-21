@@ -1,5 +1,11 @@
 import Navbar from "./navbar";
+import Head from 'next/head';
 export default function Layout({ children }) {
+  <Head>
+    <title>
+      Head desse layout
+    </title>
+  </Head>
   return (
     <div>
      <main>
